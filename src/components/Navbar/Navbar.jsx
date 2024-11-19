@@ -1,5 +1,7 @@
+
 import { NavLink } from 'react-router-dom';
-import { useUser } from '/Pro-Hero/discount-pro/src/utils/UserContext'
+import { useUser } from '/Pro-Hero/discount-pro/src/utils/AuthContext'; // Adjust the path based on your folder structure
+import PropTypes from 'prop-types';
 
 const Navbar = () => {
   const { user, handleLogout } = useUser(); 
@@ -38,6 +40,7 @@ const Navbar = () => {
             <button 
               onClick={handleLogout} 
               className='px-4 py-2 bg-red-600 rounded hover:bg-red-700'
+              aria-label="Log out"
             >
               Log Out
             </button>
@@ -55,6 +58,15 @@ const Navbar = () => {
       </div>
     </div>
   );
+};
+
+// Optional: Add PropTypes for type checking
+Navbar.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    photoURL: PropTypes.string,
+  }),
+  handleLogout: PropTypes.func.isRequired,
 };
 
 export default Navbar;
