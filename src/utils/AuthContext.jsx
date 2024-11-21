@@ -17,8 +17,14 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(false);
     };
 
+    const handleRegister = (userData) => {
+        
+        setUser(userData); 
+        setIsAuthenticated(true); 
+    };
+
     return (
-        <AuthContext.Provider value={{ user, isAuthenticated, handleLogin, handleLogout }}>
+        <AuthContext.Provider value={{ user, isAuthenticated, handleLogin, handleLogout, handleRegister }}>
             {children}
         </AuthContext.Provider>
     );
