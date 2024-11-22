@@ -4,7 +4,7 @@
 Discount Pro is a web application designed to provide users with the best discounts and deals from various brands. Users can register, log in, and access exclusive coupons and offers, making it easier to save money while shopping online.
 
 ## Live URL
-[Live Demo of Discount Pro](https://live-url.com)  
+[Live Demo of Discount Pro](https://discount-pro-80447.web.app/)  
 
 ## Key Features
 - **User Authentication**: Users can register and log in using email or Google accounts.
