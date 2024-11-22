@@ -6,7 +6,7 @@ const Slider = () => {
     const slides = [
         {
             id: 1,
-            image: 'https://i.ibb.co/JvDqb28/girl-shopping-carrying.webp',
+            image: 'https://i.ibb.co.com/MphVKT9/portrait-of-an-excited-beautiful.jpg',
             caption: 'Save big on your favorite brands!',
         },
         {
@@ -16,7 +16,7 @@ const Slider = () => {
         },
         {
             id: 3,
-            image: 'https://i.ibb.co/bL1bqck/louis-vuitton.jpg',
+            image: 'https://i.ibb.co.com/Rgtf3Th/big-sale-of-bags-r.jpg',
             caption: 'Find the best coupons and save money!',
         },
     ];
@@ -30,7 +30,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
+        <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg border-4 border-lavender-300 shadow-lg">
             <div className="absolute inset-0 transition-opacity duration-500">
                 {slides.map((slide, index) => (
                     <div
@@ -50,13 +50,13 @@ const Slider = () => {
             </div>
             <button 
                 onClick={prevSlide} 
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-purple-300 text-purple-900 p-2 rounded-full"
             >
                 &#10094; {/* Left Arrow */}
             </button>
             <button 
                 onClick={nextSlide} 
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-purple-300 text-purple-900 p-2 rounded-full"
             >
                 &#10095; {/* Right Arrow */}
             </button>

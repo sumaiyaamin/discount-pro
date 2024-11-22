@@ -1,0 +1,332 @@
+[
+    {
+        "_id": "1",
+        "brand_name": "Gucci",
+        "rating": 4.8,
+        "description": "Luxury fashion brand known for its high-quality leather goods.",
+        "brand_logo": "https://i.ibb.co.com/RBwvB1B/Gucci-logo.png",
+        "coupons": [
+            {
+                "coupon_code": "GUCCI20",
+                "description": "20% off on your first purchase.",
+                "expiry_date": "2023-12-31",
+                "condition": "Minimum purchase of $500.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "GUCCI10",
+                "description": "10% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "GUCCI5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-15",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.gucci.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    },
+    {
+        "_id": "2",
+        "brand_name": "Prada",
+        "rating": 4.7,
+        "description": "Italian luxury fashion house specializing in leather handbags, shoes, and accessories.",
+        "brand_logo": "https://i.ibb.co.com/6bGxP0L/prada-logo.png",
+        "coupons": [
+            {
+                "coupon_code": "PRADA15",
+                "description": "15% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "PRADA5",
+                "description": "5% off on your next purchase.",
+                "expiry_date": "2023-12-15",
+                "condition": "For new customers only.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "PRADA25",
+                "description": "25% off on winter collection.",
+                "expiry_date": "2023-12-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.prada.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    },
+    {
+        "_id": "3",
+        "brand_name": "Louis Vuitton",
+        "rating": 4.9,
+        "description": "World-renowned luxury brand known for its leather goods and accessories.",
+        "brand_logo": "https://i.ibb.co.com/bL1bqck/louis-vuitton.jpg",
+        "coupons": [
+            {
+                "coupon_code": "LV10",
+                "description": "10% off on your first order.",
+                "expiry_date": "2023-12-15",
+                "condition": "New customers only.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "LV20",
+                "description": "20% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "LV5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.louisvuitton.com",
+        "category": "Fashion",
+        "isSaleOn": false
+    },
+    {
+        "_id": "4",
+        "brand_name": "Chanel",
+        "rating": 4.8,
+        "description": "Iconic French luxury brand known for its haute couture and perfumes.",
+        "brand_logo": "https://i.ibb.co.com/99kdRRF/Chanel-Logo.png",
+        "coupons": [
+            {
+                "coupon_code": "CHANEL25",
+                "description": "25% off on selected fragrances.",
+                "expiry_date": "2023-12-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "CHANEL15",
+                "description": "15% off on skincare products.",
+                "expiry_date": "2023-11-15",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "CHANEL5",
+                "description": "5% off on your next purchase.",
+                "expiry_date": "2023-10-31",
+                "condition": "For new customers only.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.chanel.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    },
+    {
+        "_id": "5",
+        "brand_name": "Nike",
+        "rating": 4.6,
+        "description": "Leading sportswear brand known for its athletic shoes and apparel.",
+        "brand_logo": "https://i.ibb.co.com/RjhkjfL/Nike-Logo.png",
+        "coupons": [
+            {
+                "coupon_code": "NIKE20",
+                "description": "20% off on your next purchase.",
+                "expiry_date": "2023-11-30",
+                "condition": "Minimum purchase of $100.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "NIKE15",
+                "description": "15% off on select items.",
+                "expiry_date": "2023-12-15",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "NIKE5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.nike.com",
+        "category": "Sportswear",
+        "isSaleOn": true
+    },
+    {
+        "_id": "6",
+        "brand_name": "Adidas",
+        "rating": 4.5,
+        "description": "Global sportswear brand known for its innovative athletic gear.",
+        "brand_logo": "https://i.ibb.co.com/y68XrHk/adidas-logo.png",
+        "coupons": [
+            {
+                "coupon_code": "ADIDAS15",
+                "description": "15% off on all orders over $75.",
+                "expiry_date": "2023-12-31",
+                "condition": "No restrictions.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "ADIDAS10",
+                "description": "10% off on your next purchase.",
+                "expiry_date": "2023-11-30",
+                "condition": "Minimum purchase of $50.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "ADIDAS5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-15",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.adidas.com",
+        "category": "Sportswear",
+        "isSaleOn": false
+    },
+    {
+        "_id": "7",
+        "brand_name": "Burberry",
+        "rating": 4.4,
+        "description": "British luxury fashion house known for its trench coats and tartan patterns.",
+        "brand_logo": "https://i.ibb.co.com/T8fc11W/Burberry-Logo-1999.png",
+        "coupons": [
+            {
+                "coupon_code": "BURBERRY10",
+                "description": "10% off on your first purchase.",
+                "expiry_date": "2023-12-15",
+                "condition": "New customers only.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "BURBERRY15",
+                "description": "15% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "BURBERRY5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.burberry.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    },
+    {
+        "_id": "8",
+        "brand_name": "Versace",
+        "rating": 4.7,
+        "description": "Italian luxury fashion company known for its bold designs and vibrant prints.",
+        "brand_logo": "https://i.ibb.co.com/Tc3R5P0/versace-brand-logo.jpg",
+        "coupons": [
+            {
+                "coupon_code": "VERSACE20",
+                "description": "20% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "VERSACE15",
+                "description": "15% off on your next purchase.",
+                "expiry_date": "2023-12-15",
+                "condition": "Minimum purchase of $100.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "VERSACE5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.versace.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    },
+    {
+        "_id": "9",
+        "brand_name": "Fendi",
+        "rating": 4.6,
+        "description": "Italian luxury fashion house known for its leather goods and fur.",
+        "brand_logo": "https://i.ibb.co.com/hBzZ4Nb/fendi-roma-vector-logo.png",
+        "coupons": [
+            {
+                "coupon_code": "FENDI15",
+                "description": "15% off on your first order.",
+                "expiry_date": "2023-12-31",
+                "condition": "New customers only.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "FENDI10",
+                "description": "10% off on selected items.",
+                "expiry_date": "2023-11-30",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "FENDI5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-15",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.fendi.com",
+        "category": "Fashion",
+        "isSaleOn": false
+    },
+    {
+        "_id": "10",
+        "brand_name": "Balenciaga",
+        "rating": 4.8,
+        "description": "Luxury fashion brand known for its innovative designs and streetwear.",
+        "brand_logo": "https://i.ibb.co.com/GQ7kYDq/balenciaga-logo-png-seeklogo-365962.png",
+        "coupons": [
+            {
+                "coupon_code": "BALENCIAGA20",
+                "description": "20% off on selected items.",
+                "expiry_date": "2023-12-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "BALENCIAGA15",
+                "description": "15% off on your next purchase.",
+                "expiry_date": "2023-11-30",
+                "condition": "Minimum purchase of $150.",
+                "coupon_type": "percentage"
+            },
+            {
+                "coupon_code": "BALENCIAGA5",
+                "description": "5% off sitewide.",
+                "expiry_date": "2023-10-31",
+                "condition": "Limited time offer.",
+                "coupon_type": "percentage"
+            }
+        ],
+        "shop_Link": "https://www.balenciaga.com",
+        "category": "Fashion",
+        "isSaleOn": true
+    }
+  ]

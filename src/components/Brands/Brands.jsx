@@ -1,30 +1,18 @@
+import  { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa'; 
-import './Brands.css'
-import { useEffect, useState } from 'react';
+import { FaStar } from 'react-icons/fa';
+import couponsData from '/Pro-Hero/discount-pro/public/data/couponsData.json';
+import { useAuth } from '../utils/AuthContext';
 
 const Brands = () => {
     const [brandsData, setBrandsData] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const { user } = useAuth();
 
     useEffect(() => {
-        
-        fetch('/couponsData.json')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setBrandsData(data); 
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
+        setBrandsData(couponsData);
     }, []);
 
-   
     const filteredBrands = brandsData.filter(brand =>
         brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -42,11 +30,7 @@ const Brands = () => {
             <div className="grid grid-cols-1 gap-4">
                 {filteredBrands.map(brand => (
                     <div key={brand._id} className="border rounded-lg p-4 shadow-md flex items-center">
-                        <img 
-                            src={brand.brand_logo} 
-                            alt={brand.brand_name} 
-                            className="w-16 h-16 object-contain mr-4" 
-                        />
+                        <img src={brand.brand_logo} alt={brand.brand_name} className="w-16 h-16 object-contain mr-4" />
                         <div className="flex-grow">
                             <h3 className="text-lg font-semibold">{brand.brand_name}</h3>
                             <div className="flex items-center mb-2">
@@ -60,8 +44,8 @@ const Brands = () => {
                                 <span className="text-red-500 font-bold animate-bounce">Sale is on!</span>
                             )}
                             <Link 
-                                to={localStorage.getItem('user') ? `/brands/${brand._id}` : '/login'} 
-                                className="mt-2 inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                to={user ? `/brand/${brand._id}` : '/login'}
+                                className="mt-2 inline-block px-4 py-2 bg-purple-400 text-white rounded hover:bg-blue-600"
                             >
                                 View Coupons
                             </Link>

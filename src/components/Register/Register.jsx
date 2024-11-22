@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { useUser } from '/Pro-Hero/discount-pro/src/utils/AuthContext'; 
+import { useAuth } from '../utils/AuthContext'; 
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast'; 
 
 const Register = () => {
-    const { handleRegister } = useUser(); 
+    const { handleRegister } = useAuth(); 
     const navigate = useNavigate();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [photoURL, setPhotoURL] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(''); 
+    const [error, setError] = useState('');
 
     const validatePassword = (password) => {
         const hasUpperCase = /[A-Z]/.test(password);
@@ -19,74 +19,68 @@ const Register = () => {
         return hasUpperCase && hasLowerCase && isValidLength;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setError('');
+
         if (!validatePassword(password)) {
             setError('Password must have at least 6 characters, including an uppercase and a lowercase letter.');
             toast.error('Password must have at least 6 characters, including an uppercase and a lowercase letter.');
             return;
         }
 
-      
-        handleRegister({ name, email, photoURL }); 
-        navigate('/'); 
+        try {
+            await handleRegister({ name, email, photoURL, password }); 
+            navigate('/'); // Redirect to home page after successful registration
+        } catch (err) {
+            setError('Registration failed. Please try again.');
+            toast.error('Registration failed. Please try again.');
+            console.error('Registration error:', err);
+        }
     };
 
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold mb-4">User Registration</h1>
             <form onSubmit={handleSubmit} className="border rounded-lg p-4">
-                <div className="mb-4">
-                    <label className="block mb-2">Name</label>
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="border rounded-lg p-2 w-full"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block mb-2">Email</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="border rounded-lg p-2 w-full"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block mb-2">Photo URL</label>
-                    <input
-                        type="text"
-                        value={photoURL}
-                        onChange={(e) => setPhotoURL(e.target.value)}
-                        className="border rounded-lg p-2 w-full"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block mb-2">Password</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="border rounded-lg p-2 w-full"
-                        required
-                    />
-                </div>
-                {error && <p className="text-red-500 mb-4">{error}</p>} {/* Display error message */}
+                <input
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="border rounded-lg p-2 mb-4 w-full"
+                    required
+                />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="border rounded-lg p-2 mb-4 w-full"
+                    required
+                />
+                <input
+                    type="text"
+                    placeholder="Photo URL"
+                    value={photoURL}
+                    onChange={(e) => setPhotoURL(e.target.value)}
+                    className="border rounded-lg p-2 mb-4 w-full"
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="border rounded-lg p-2 mb-4 w-full"
+                    required
+                />
+                {error && <p className="text-red-500 mb-4">{error}</p>}
                 <button type="submit" className="bg-blue-500 text-white rounded-lg px-4 py-2">
                     Register
                 </button>
                 <p className="mt-2">
                     Already have an account? <a href="/login" className="text-blue-500">Login</a>
-                </p>
-                <p className="mt-2">
-                    <button className="bg-red-500 text-white rounded-lg px-4 py-2">
-                        Register with Google
-                    </button>
                 </p>
             </form>
         </div>
