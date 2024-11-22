@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify'; // Import ToastContainer and toast
+import { ToastContainer, toast } from 'react-toastify'; 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const CouponPage = () => {
-    const { id } = useParams(); // Get the brand ID from the URL parameters
+    const { id } = useParams(); 
     const [brand, setBrand] = useState(null);
-    const [loading, setLoading] = useState(true); // Loading state
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
         const fetchBrandData = async () => {
             try {
-                // Fetch the coupons data from the JSON file
+               
                 const response = await fetch('/data/couponsData.json');
                 const data = await response.json();
 
                 // Find the brand by ID
-                const foundBrand = data.find((b) => b._id === id); // Assuming each brand has a unique ID
+                const foundBrand = data.find((b) => b._id === id); 
 
                 if (foundBrand) {
                     setBrand(foundBrand);
@@ -36,13 +36,13 @@ const CouponPage = () => {
 
     const handleCopy = (code) => {
         toast.success(`Copied: ${code}`, {
-            position: "top-center", // Position of the toast
-            autoClose: 3000, // Duration before the toast disappears
-            hideProgressBar: true, // Hide the progress bar
-            closeOnClick: true, // Close on click
-            pauseOnHover: true, // Pause on hover
-            draggable: true, // Allow dragging
-            progress: undefined, // No progress
+            position: "top-center", 
+            autoClose: 3000, 
+            hideProgressBar: true, 
+            closeOnClick: true, 
+            pauseOnHover: true, 
+            draggable: true, 
+            progress: undefined,
         });
     };
 
@@ -59,7 +59,11 @@ const CouponPage = () => {
     };
 
     if (loading) {
-        return <div>Loading...</div>; // Show loading state
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                <span className="loading loading-bars loading-lg"></span>
+            </div>
+        ); 
     }
 
     return (
@@ -73,9 +77,7 @@ const CouponPage = () => {
                         {renderStars(Math.round(brand.rating))}
                     </div>
                     <p className="text-lg">{brand.description}</p>
-                    <a href={brand.shop_Link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-                        Shop Now
-                    </a>
+                
                 </div>
             )}
             {brand && brand.coupons.length > 0 ? (
@@ -92,7 +94,7 @@ const CouponPage = () => {
                                         Copy Code
                                     </button>
                                 </CopyToClipboard>
-                                <a href={brand.shop_Link} target="_blank" rel="noopener noreferrer" className="bg-purple-300 text-white rounded-lg px-4 py-2">
+                                <a href={brand.shop_Link} target="_blank" rel="noopener noreferrer" className="bg-purple-600 text-white rounded-lg px-4 py-2">
                                     Use Now
                                 </a>
                             </div>
