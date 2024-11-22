@@ -10,9 +10,9 @@ import MyProfile from "../MyProfile/MyProfile";
 import UpdateProfile from "../UpdateProfile/UpdateProfile"; 
 import PrivateRoute from "../PrivateRoute/PrivateRoute"; 
 import NotFound from "../NotFound/NotFound"; 
-import ForgotPassword from "../ForgotPassword/ForgotPassword"; // Import ForgotPassword component
+import ForgotPassword from "../ForgotPassword/ForgotPassword"; 
 
-// Create the router
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <UpdateProfile />
           </PrivateRoute>
-        ), // Use PrivateRoute for UpdateProfile
+        ), 
       },
       {
         path: "/about", 
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*", // Catch-all for undefined routes
-        element: <NotFound />, // Use NotFound component for undefined routes
+        element: <NotFound />, 
       },
     ],
   },
