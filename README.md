@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="./src/assets/couponicon.png" alt="Serve Sync Logo" width="120" height="120" style="background: #f97316; padding: 12px; border-radius: 12px;" />
+
 # Discount Pro
 
 ## Purpose
@@ -28,7 +31,7 @@ Discount Pro is a web application designed to provide users with the best discou
 ## Installation
 To get started with the project, clone the repository and install the necessary packages:
 bash
-git clone https://github.com/your-username/discount-pro.git
+git clone https://github.com/sumaiyaamin/discount-pro.git
 cd discount-pro
 npm install
 
@@ -37,7 +40,7 @@ To run the application locally, use the following command:
 bash
 npm start
 
-This will start the development server, and you can view the application in your browser at `http://localhost:3000`.
+This will start the development server, and you can view the application in your browser .
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
