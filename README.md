@@ -1,5 +1,6 @@
 <div align="center">
   <img src="./src/assets/couponicon.png" alt="Serve Sync Logo" width="120" height="120" style="background: #f97316; padding: 12px; border-radius: 12px;" />
+</div>
 
 # Discount Pro
 
