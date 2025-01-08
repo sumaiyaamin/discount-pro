@@ -1,8 +1,8 @@
 <div align="center">
   <img src="./src/assets/couponicon.png" alt="Serve Sync Logo" width="120" height="120" style="background: #f97316; padding: 12px; border-radius: 12px;" />
+  # Discount Pro
 </div>
 
-# Discount Pro
 
 ## Purpose
 Discount Pro is a web application designed to provide users with the best discounts and deals from various brands. Users can register, log in, and access exclusive coupons and offers, making it easier to save money while shopping online.
