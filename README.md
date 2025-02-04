@@ -34,16 +34,17 @@ Discount Pro is a web application designed to provide users with the best discou
 
 ## Installation
 To get started with the project, clone the repository and install the necessary packages:
-bash
+```bash
 git clone https://github.com/sumaiyaamin/discount-pro.git
 cd discount-pro
 npm install
+```
 
 ## Usage
 To run the application locally, use the following command:
-bash
+```bash
 npm start
-
+```
 This will start the development server, and you can view the application in your browser .
 
 ## Contributing
