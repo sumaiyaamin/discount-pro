@@ -10,8 +10,12 @@
 ## Purpose
 Discount Pro is a web application designed to provide users with the best discounts and deals from various brands. Users can register, log in, and access exclusive coupons and offers, making it easier to save money while shopping online.
 
-## Live URL
-[Live Demo of Discount Pro](https://discount-pro-80447.web.app/)  
+<div align ="center">
+  
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](discount-pro-80447.web.app/)
+ 
+  [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB.svg)](https://reactjs.org/)
+  </div>
 
 ## Key Features
 - **User Authentication**: Users can register and log in using email or Google accounts.
@@ -32,20 +36,31 @@ Discount Pro is a web application designed to provide users with the best discou
 - `tailwindcss`: A utility-first CSS framework for styling the application.
 - `firebase`: A platform for building web and mobile applications, used for authentication and database services.
 
-## Installation
-To get started with the project, clone the repository and install the necessary packages:
+### Installation
+
+1. Clone the repository
 ```bash
 git clone https://github.com/sumaiyaamin/discount-pro.git
+```
+
+2. Install dependencies
+```bash
 cd discount-pro
 npm install
 ```
 
-## Usage
-To run the application locally, use the following command:
+3. Set up environment variables
+Create a .env file in the root directory and add:
+
 ```bash
-npm start
+FIREBASE_API_KEY=your_firebase_api_key
+
 ```
-This will start the development server, and you can view the application in your browser .
+
+4. Start the development server
+```bash
+npm run dev
+```
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
