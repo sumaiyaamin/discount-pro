@@ -12,7 +12,7 @@ Discount Pro is a web application designed to provide users with the best discou
 
 <div align ="center">
   
-  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](discount-pro-80447.web.app/)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://discount-pro-80447.web.app/)
  
   [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB.svg)](https://reactjs.org/)
   </div>
